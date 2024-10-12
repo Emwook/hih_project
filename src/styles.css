@@ -1,0 +1,172 @@
+body {
+    background: whitesmoke;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.menu-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu-item {
+    position: relative;
+    margin: 0 10px;
+    font-size: 16px;
+    padding: 8px 20px;
+}
+
+.brand-name {
+    margin-right: 10px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.menu-item:hover {
+    scale:110%;
+    transition: 0.1s all ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    font-size: 16px;
+    padding: 0 6px;
+}
+#intro-p {
+    padding: 0;
+}
+.section {
+    min-height:440px;
+    margin: 40px 0;
+    /* border: 1px solid black; */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.section-title {
+    /*margin-left: 30px; */
+    font-size: 30px;
+}
+
+.flexbox {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 200px;
+    width: 480px;
+    overflow-y: scroll;
+    padding: 0 10px 0 10px; /* Removed the 30px padding from the top */
+    border-left: 1px solid black;
+    /* border-right: 1px solid black; */
+
+}
+
+.flexitem:first-child {
+    margin-top: 0;
+} 
+
+
+
+.flexitem {    
+    margin: 10px 0 0 0;
+    width: 420px;
+    min-height: 120px;
+}
+
+.themed {
+    background: white;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.themed-dark {
+    letter-spacing: 2px;
+    color: white;
+    background: black;
+    border: 1px solid white;
+    padding: 4px 20px;
+}
+
+::-webkit-scrollbar {
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: whitesmoke; 
+    border: 1px solid black;
+    transition: 1s all ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: white;
+}
+.text-col {
+    margin-top: 20px;
+    height: 600px;
+    margin-bottom: 20px;
+    /* border: 1px solid black; */
+}
+
+.textbox {    
+    position: relative;
+    height: 274px;
+    width: 480px;
+    margin-bottom: 10px;
+}
+
+.pic-col {
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.picbox {
+    position: relative;
+    border: 1px solid black;
+    max-width: max-content;
+    max-height: max-content;
+    margin-bottom: 30px;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.pic-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 20px 0;
+    margin-left: auto;
+}
+
+.picbox-mini {
+    position: relative;
+    border: 1px solid black;
+    max-width: max-content;
+    max-height: max-content;
+    margin: 0 30px;
+}
+
