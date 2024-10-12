@@ -1,5 +1,4 @@
-// app.js
-import { coffeeDrinks } from './data.js'; // Importing the data from data.js
+import  {coffeeDrinks} from '../data/data.js'; // Importing the data from data.js
 
 // Function to render the coffee drinks
 function renderCoffeeDrinks() {
@@ -38,9 +37,9 @@ function renderCoffeeDrinks() {
         drinkDiv.appendChild(drinkRecipe);
 
         // Finally, append the drink div to the coffee container
-        coffeeContainer.appendChild(drinkDiv);
+        coffeeContainer?.appendChild(drinkDiv);
     });
-    console.log('script works');
+    console.log(coffeeDrinks);
 }
 // Call the function to render the drinks on the page
 renderCoffeeDrinks();

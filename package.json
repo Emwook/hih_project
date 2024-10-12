@@ -1,0 +1,40 @@
+{
+    "name": "hih-project",
+    "version": "1.2.0",
+    "main": "index.html",
+    "scripts": {
+        "init-project": "npm install && npm-run-all init:*",
+        "init:dirs": "mkdirp dist src/css src/vendor src/images src/js",
+        "init:files": "touch README.md src/index.html src/js/script.js",
+        "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+        "init:gitignore:custom": "echo \"dist\" >> .gitignore",
+        "test": "npm-run-all test:*",
+        "test:html": "html-validate src/*.html",
+        "test:js": "eslint --fix src/js/",
+        "build": "npm-run-all build:* test",
+        "build:clean": "rimraf dist && mkdirp dist",
+        "build:copy": "copyfiles -a -u 1 -e \"**/sass/**/*\" -e \"**/.gitkeep\" \"src/**/*\" dist",
+        "build:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
+        "build-dev": "npm-run-all build:autoprefixer",
+        "watch": "npm-run-all build build-dev -p watch:*",
+        "watch:browsersync": "browser-sync start --server dist --files \"dist/**/*\""
+    },
+    "keywords": [],
+    "author": "emwook",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.2.4",
+        "browser-sync": "^2.26.3",
+        "copyfiles": "^2.1.0",
+        "eslint": "^9.12.0",
+        "globstar": "^1.0.0",
+        "html-validate": "^2.8.0",
+        "mkdirp": "^0.5.1",
+        "npm-run-all": "^4.1.5",
+        "onchange": "^5.2.0",
+        "postcss": "^8.2.6",
+        "postcss-cli": "^8.3.1",
+        "rimraf": "^3.0.2",
+        "stylelint": "^9.10.1"
+    }
+}
