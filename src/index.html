@@ -42,7 +42,7 @@
             <div class="text-col">
                 <h2>topic of the section</h2>
                 <div class="textbox themed" id="recipe-box"></div>
-                <div class="flexbox">
+                <div class="flexbox fixed-height">
                     <div class="flexitem themed">
                         <h3>box 1</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
@@ -99,6 +99,36 @@
                 </div>
             </div>
         </section>
+        <section class="contact">
+            <fieldset>
+                <legend><h2 class="contact-title">Contact Page</h2></legend>
+                <div class="flexbox">
+                    <div>
+                        <label for="name"><h3>Name</h3></label><br>
+                        <input id="name" type="text" placeholder="John Appleseed" minlength="2" required>
+                        <label for="subject"><h3>Subject</h3></label><br>
+                        <input id="subject" type="text" placeholder="Business" minlength="2" maxlength="40" required>
+                    </div>
+                    <div>
+                        <label for="email"><h3>E-mail adress</h3></label><br>
+                        <input id="email" type="email" placeholder="Jn@ad.com" minlength="2" required>
+                        <label for="phone"><h3>Phone adress</h3></label><br>
+                        <input id="phone" type="tel" placeholder="111 222 333" minlength="9" maxlength="15">
+                    </div>
+                    <div>
+                        <label for="message"><h3>Your message</h3></label><br>
+                        <textarea id="message" name="message" placeholder="text" rows="4" cols="30" required></textarea>
+                        <button type="submit" name="submit" class="themed">submit</button>
+                        <button type="submit" name="submit" class="themed">clear</button>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+        <footer>
+            <div class="footer-container themed-dark">
+                <h5>@Emilia-Lukasiuk</h5>
+            </div>
+        </footer>
         </div>
         <script type="module" src="js/script.js"></script>
     </body>
